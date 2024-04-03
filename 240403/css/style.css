@@ -26,3 +26,10 @@ body{margin: 0;}
 #active{
     color: red !important;
 }
+#grid{
+    display: grid;
+    grid-template-columns: 150px 1fr;
+}
+#grid ol{
+    padding-left: 30px;
+}
