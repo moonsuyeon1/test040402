@@ -6,7 +6,16 @@ h1{
     color: red;
     font-size: 1.5em;
     text-align: center;
+    border-bottom: 1px gray solid;
+    margin: 0;
 }
+ol{
+    border-right: 1px solid gray;
+    width: 100px;
+    margin: 0;
+    padding: 20px;
+}
+body{margin: 0;}
 #test{
     color: blueviolet;
     text-decoration: line-through;
