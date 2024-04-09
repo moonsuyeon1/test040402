@@ -53,7 +53,7 @@
   @media screen and (min-width: 900px){
     body{
       /* 이미지 추가 */
-      background: url(../images/laba.jpg) no-repeat;
+      background: url(../images/laba.jpg) no-repeat fixed;
       background-size: cover;
     }
   }
