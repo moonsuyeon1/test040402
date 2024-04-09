@@ -33,3 +33,16 @@ body{margin: 0;}
 #grid ol{
     padding-left: 30px;
 }
+@media(max-width :800px){
+    #grid {
+        display: block;
+    }
+    #grid ol {
+        border-right: none;
+    }
+    h1 {
+        border-bottom: none;
+    }
+    
+}
+
