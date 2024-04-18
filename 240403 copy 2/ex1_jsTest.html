@@ -24,8 +24,14 @@ alert('오늘 국밥 먹음')
 }
     ">
 <br>
+<script>
+    document.write("방법1")
+</script>
 <input type="text" value="onchage테스트" onchange="alert('changed')">
 <br>
+<script>
+    document.write("방법2")
+</script>
 <input type="text" onkeydown="alert('key down')" class="keydown">
 <input type="button" value="clear" class="button">
 <script>
@@ -39,19 +45,17 @@ alert('오늘 국밥 먹음')
     });
 </script>
 <br>
-<input type="text" onkeydown="alert('key down')" class="keydown1">
+<script>
+    document.write("방법3")
+</script>
+<input type="text" onkeydown="alert('key down')" id="keydown1">
 <button onclick="textdelete()">clear</button>
 
 <script>
     function textdelete(){
-        var keydowns = document.querySelectorAll(".keydown1");
-        keydowns.forEach(function(input) {
-            input.value = "";
-        });
+        document.getElementById("keydown1").value = '';
     }
 </script>
-
-
 
 </body>
 </html>

@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slick Slider</title>
+    <!-- Slick CSS -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Slick JS -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <!-- Your Custom CSS (if any) -->
+
+</head>
+
+<body>
+
+    <div style="text-align: right;margin-right: 50px;margin-top: 20px;">
+        <a href="./login.html">로그인</a> | <a href="./register.html">회원가입</a> | <a href="./login.html">마이페이지</a>
+    </div>
+    <style>
+        a {
+            color: black;
+        }
+
+        button {
+            background-color: transparent;
+        }
+    </style>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    .menubar1 {
+        width: 300px;
+        text-align: center;
+    }
+    .side_menu1 {
+        display: none;
+        list-style: none;
+        padding: 10px;
+        background-color: white;
+    }
+    .list1 {
+        cursor: pointer;
+        padding: 10px;
+        background-color: #ddd;
+    }
+    .container01 {
+        display: none;position: absolute;z-index: 9999999;
+    }
+    .hamburger_button{display: none;}
+    @media screen and (max-width:768px) {
+        .hamburger_button{
+            display: block;
+        }
+    }
+</style>
+
+<button class="hamburger_button" onclick="toggleMenu()" style="border: none;"><i class="fas fa-bars" style="font-size: 20px;"></i></button>
+<div class="container01">
+    <ul class="menubar1" style="font-size: 18px;">
+        <li>
+            <div class="list1">브랜드소개</div>
+            <ul class="side_menu1">
+                <li>브랜드소개</li>
+                <li>본사·지점안내</li>
+            </ul>
+        </li>
+        <li>
+            <div class="list1">오늘도시락</div>
+            <ul class="side_menu1">
+                <li>부제목</li>
+                <li>부제목</li>
+                <li>부제목</li>
+                <li>부제목</li>
+                <li>부제목</li>
+            </ul>
+        </li>
+        <li>
+            <div class="list1">도시락헬스케어</div>
+            <ul class="side_menu1">
+                <li>부제목</li>
+                <li>부제목</li>
+                <li>부제목</li>
+                <li>부제목</li>
+                <li>부제목</li>
+            </ul>
+        </li>
+        <li>
+            <div class="list1">이벤트</div>
+            <ul class="side_menu1">
+                <li>부제목</li>
+                <li>부제목</li>
+                <li>부제목</li>
+                <li>부제목</li>
+                <li>부제목</li>
+            </ul>
+        </li>
+        <li>
+            <div class="list1">파트너</div>
+            <ul class="side_menu1">
+                <li>부제목</li>
+                <li>부제목</li>
+                <li>부제목</li>
+                <li>부제목</li>
+                <li>부제목</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<script>
+    function toggleMenu() {
+        var container = document.querySelector(".container01");
+        if (container.style.display === "none" || container.style.display === "") {
+            container.style.display = "block";
+        } else {
+            container.style.display = "none";
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        var list1 = document.querySelectorAll(".list1");
+        var side_menu1 = document.querySelectorAll(".side_menu1");
+        list1.forEach(function(item, index) {
+            item.addEventListener("click", function() {
+                side_menu1[index].style.display = (side_menu1[index].style.display === "none") ? "block" : "none";
+            });
+        });
+    });
+</script>
+
+
+
+
+
+    <img class="kakao" src="./kakao.png" alt="" style="position: absolute;margin-left: 100px;">
+    <!-- logo -->
+    <div style="display: flex;justify-content: center;padding-bottom: 20px;">
+        <img src="./mimilunchbox.jpg" style="width: 10%;height: 10%;">
+    </div>
+    <!-- logo -->
+    <!-- menu -->
+    <div style="position: relative;width: 100%;height: 40px;display: flex;justify-content: center;">
+        <ul class="menubar" style="font-size: 18px;">
+            <style>
+                .list {
+                    position: relative;
+                }
+
+                .side_menu {
+                    background-color: rgba(255, 255, 255, 0.8);
+                    position: absolute;
+                    z-index: 99;
+                    padding-top: 10px;
+                }
+
+                .side_menu li {
+                    text-align: center;
+                    padding: 10px 0;
+                }
+
+                li {
+                    width: 200px;
+                    text-align: center;
+                }
+                @media screen and (max-width:768px) {
+                    .menubar,.list,.side_menu{
+            display: none;
+        }
+    }
+            </style>
+            <li>
+                <div class="list">브랜드소개</div>
+                <ul class="side_menu">
+                    <li>브랜드소개</li>
+                    <li>본사·지점안내</li>
+                    <li style="opacity: 0;">부제목</li>
+                    <li style="opacity: 0;">부제목</li>
+                    <li style="opacity: 0;">부제목</li>
+                </ul>
+            </li>
+            <li>
+                <div class="list" style="text-align: center;">오늘도시락</div>
+                <ul class="side_menu">
+                    <li>부제목</li>
+                    <li>부제목</li>
+                    <li>부제목</li>
+                    <li>부제목</li>
+                    <li>부제목</li>
+                </ul>
+            </li>
+            <li>
+                <div class="list">도시락헬스케어</div>
+                <ul class="side_menu">
+                    <li>부제목</li>
+                    <li>부제목</li>
+                    <li>부제목</li>
+                    <li>부제목</li>
+                    <li>부제목</li>
+                </ul>
+            </li>
+            <li>
+                <div class="list">이벤트</div>
+                <ul class="side_menu">
+                    <li>부제목</li>
+                    <li>부제목</li>
+                    <li>부제목</li>
+                    <li>부제목</li>
+                    <li>부제목</li>
+                </ul>
+            </li>
+            <li>
+                <div class="list">파트너</div>
+                <ul class="side_menu">
+                    <li>부제목</li>
+                    <li>부제목</li>
+                    <li>부제목</li>
+                    <li>부제목</li>
+                    <li>부제목</li>
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+    <!-- menu -->
+    <style>
+        * {
+            text-decoration: none;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .menubar {
+            display: flex;
+        }
+
+        .side_menu {
+            display: none;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var menubar = document.querySelector(".menubar");
+
+            menubar.addEventListener("mouseover", function (event) {
+                if (event.target.classList.contains("list")) {
+                    var sideMenus = document.querySelectorAll(".side_menu");
+                    sideMenus.forEach(function (sideMenu) {
+                        sideMenu.style.display = 'block';
+                    });
+                }
+            });
+
+            menubar.addEventListener("mouseout", function (event) {
+                if (!event.relatedTarget || !event.relatedTarget.closest(".menubar")) {
+                    var sideMenus = document.querySelectorAll(".side_menu");
+                    sideMenus.forEach(function (sideMenu) {
+                        sideMenu.style.display = 'none';
+                    });
+                }
+            });
+        });
+    </script>
+
+<div style="position: relative;width: 100%;height: 600px;">
+    <div class="single-item">
+        <!-- Your slide content goes here -->
+        <div><img src="./delicious-bento-box-arrangement.jpg" alt="Slide 1"></div>
+        <div><img src="./4.jpg" alt="Slide 2"></div>
+        <div><img src="./3.jpg" alt="Slide 3"></div>
+    </div>
+    <button class="prev-btn" style="position: absolute;top: 0;margin-left: 100px;margin-top: 300px;"><i class="fa-solid fa-chevron-left"></i></button>
+    <button class="next-btn" style="position: absolute;top: 0;right: 0;margin-right: 100px;margin-top: 300px;"><i class="fa-solid fa-chevron-right"></i></button>
+    <div class="custom-dots" style="position: absolute;bottom: 10px;left: 50%;transform: translateX(-50%);display: flex;">
+        <!-- Dots will be appended here dynamically -->
+    </div>
+</div>
+<style>
+    .single-item img {
+        width: 100%;
+        height: 600px;
+    }
+
+    .prev-btn,
+    .next-btn {
+        border: none;
+        font-size: 30px;
+        background-color: transparent;
+        color: white;
+    }
+
+    .custom-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: white;
+        margin: 0 5px;
+        cursor: pointer;
+    }
+
+    .custom-dot.active {
+        background-color: black;
+    }
+</style>
+<script>
+    $(document).ready(function () {
+        var $slickElement = $('.single-item');
+        var $customDots = $('.custom-dots');
+
+        $slickElement.slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: false,
+            arrows: false,
+            autoplay: true,
+            autoplaySpeed: 2000,
+        });
+
+        $('.prev-btn').click(function () {
+            $slickElement.slick('slickPrev');
+        });
+
+        $('.next-btn').click(function () {
+            $slickElement.slick('slickNext');
+        });
+
+        // Dynamically create custom dots based on the number of slides
+        var slidesCount = $slickElement.find('.slick-slide').length;
+        var dotsToShow = Math.min(3, slidesCount);
+        for (var i = 0; i < dotsToShow; i++) {
+            var $dot = $('<div class="custom-dot"></div>');
+            $dot.attr('data-slide', i);
+            $customDots.append($dot);
+        }
+
+        // Highlight active dot
+        $slickElement.on('afterChange', function (event, slick, currentSlide) {
+            $customDots.find('.custom-dot').removeClass('active');
+            $customDots.find('.custom-dot[data-slide="' + currentSlide + '"]').addClass('active');
+        });
+
+        // Handle dot click
+        $customDots.on('click', '.custom-dot', function () {
+            var slideIndex = $(this).attr('data-slide');
+            $slickElement.slick('slickGoTo', slideIndex);
+        });
+
+        // Set green color to the first dot on page load
+        $customDots.find('.custom-dot:first-child').addClass('active');
+    });
+</script>
+
+
+    <div class="blank" style="height: 100px;"></div>
+    <div style="text-align: center;font-size: 32px;font-weight: bold;">인기도시락</div>
+    <div class="blank" style="height: 5px;"></div>
+    <div style="text-align: center;font-size: 20px;">입맛 저격! 오늘도시락, 당신을 위한 최고 선택</div>
+    <div class="blank" style="height: 40px;"></div>
+    <br>
+
+    <div style="position: relative;width: 100%;">
+    <div style="display: flex;justify-content: center;">
+        <div class="slick-slider" style="width: 80%;">
+            <div class="element element-1"><img src="./01.jpg" style="width: 100%;height: 100%;"></div>
+            <div class="element element-1"><img src="./01.jpg" style="width: 100%;height: 100%;"></div>
+            <div class="element element-1"><img src="./01.jpg" style="width: 100%;height: 100%;"></div>
+            <div class="element element-1"><img src="./01.jpg" style="width: 100%;height: 100%;"></div>
+            <div class="element element-1"><img src="./01.jpg" style="width: 100%;height: 100%;"></div>
+            <div class="element element-1"><img src="./01.jpg" style="width: 100%;height: 100%;"></div>
+            <div class="element element-1"><img src="./01.jpg" style="width: 100%;height: 100%;"></div>
+        </div>
+    </div>
+    <button class="prev-btn1" style="position: absolute; top: 0;margin-top: 100px;margin-left: 100px;"><i class="fa-solid fa-chevron-left"></i></button>
+    <button class="next-btn1" style="position: absolute; top: 0;right: 0;margin-top: 100px;margin-right: 100px;"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+
+    <style>
+        .prev-btn1,
+        .next-btn1 {
+            border: none;
+            font-size: 30px;
+            background-color: transparent;
+            color: gray;
+        }
+    </style>
+
+    <div class="blank" style="height: 20px;"></div>
+    <div style="display: flex;justify-content: center;">
+        <button style="width: 578px;height: 60px;font-size: 20px;">상품 더보기 +</button>
+    </div>
+
+    <style>
+        .slick-slider .element {
+            height: 200px;
+            width: 200px;
+            background-color: #000;
+            color: #fff;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 0px 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+        }
+
+        .slick-slider .slick-disabled {
+            opacity: 0;
+            pointer-events: none;
+        }
+    </style>
+    <script>
+        $(".slick-slider").slick({
+            slidesToShow: 4,
+            infinite: true,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]  
+        });
+        $('.prev-btn1').click(function () {
+            $('.slick-slider').slick('slickPrev');
+        });
+
+        $('.next-btn1').click(function () {
+            $('.slick-slider').slick('slickNext');
+        });
+        
+    </script>
+
+</body>
+
+</html>
+
+
+<!-- 도시락 -->
+<div class="blank" style="height: 150px;"></div>
+<div style="text-align: center;font-size: 32px;font-weight: bold;">할인 도시락</div>
+<div class="blank" style="height: 5px;"></div>
+<div style="text-align: center;font-size: 20px;">행사의 맛, 한 그릇으로 만나는 특별한 순간</div>
+<br>
+
+<div style="display: flex;justify-content: center;">
+    <div id="grid">
+        <div>
+            <img src="./02.jpg" alt="">
+            <p>제육볶음 5찬 보온 도시락</p> 
+            <p style="color: green;padding: 7px 0;">8,000원</p> 
+            <h4>BEST</h4>
+        </div>
+        <div>
+            <img src="./02.jpg" alt="">
+            <p>제육볶음 5찬 보온 도시락</p> 
+            <p style="color: green;padding: 7px 0;">8,000원</p> 
+            <!-- <h4>BEST</h4> -->
+        </div>
+        <div>
+            <img src="./02.jpg" alt="">
+            <p>제육볶음 5찬 보온 도시락</p> 
+            <p style="color: green;padding: 7px 0;">8,000원</p> 
+            <h4>BEST</h4>
+        </div>
+        <div>
+            <img src="./02.jpg" alt="">
+            <p>제육볶음 5찬 보온 도시락</p> 
+            <p style="color: green;padding: 7px 0;">8,000원</p> 
+            <!-- <h4>BEST</h4> -->
+        </div>
+        <div>
+            <img src="./02.jpg" alt="">
+            <p>제육볶음 5찬 보온 도시락</p> 
+            <p style="color: green;padding: 7px 0;">8,000원</p> 
+            <!-- <h4>BEST</h4> -->
+        </div>
+        <div>
+            <img src="./02.jpg" alt="">
+            <p>제육볶음 5찬 보온 도시락</p> 
+            <p style="color: green;padding: 7px 0;">8,000원</p> 
+            <h4 style="background-color: gray;">SOLDOUT</h4>
+        </div>
+        <div>
+            <img src="./02.jpg" alt="">
+            <p>제육볶음 5찬 보온 도시락</p> 
+            <p style="color: green;padding: 7px 0;">8,000원</p> 
+            <h4>BEST</h4>
+        </div>
+        <div>
+            <img src="./02.jpg" alt="">
+            <p>제육볶음 5찬 보온 도시락</p> 
+            <p style="color: green;padding: 7px 0;">8,000원</p> 
+            <h4>BEST</h4>
+        </div>
+        <div>
+            <img src="./02.jpg" alt="">
+            <p>제육볶음 5찬 보온 도시락</p> 
+            <p style="color: green;padding: 7px 0;">8,000원</p> 
+            <h4>BEST</h4>
+        </div>
+        <div>
+            <img src="./02.jpg" alt="">
+            <p>제육볶음 5찬 보온 도시락</p> 
+            <p style="color: green;padding: 7px 0;">8,000원</p> 
+            <h4>BEST</h4>
+        </div>
+
+    </div>
+</div>
+<div style="display: flex;justify-content: center;">
+    <button style="width: 578px;height: 60px;font-size: 20px;">상품 더보기 +</button>
+</div>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    #grid div {
+        /* width: 90%; */
+        margin: 20px;
+    }
+    #grid img{
+        width: 80%;
+    }
+
+    #grid p{
+        font-weight: bold;
+        font-size: 18px;
+    }
+    #grid h4{
+        font-size: 12px;
+        background-color: green; 
+        width: 65px;color: white;
+        text-align: center;
+        padding: 3px 0;
+
+    }
+    #grid {
+        width: 80%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    @media screen and (max-width:1024px) {
+        #grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+    }
+    @media screen and (max-width:768px) {
+        #grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+    }
+
+    @media screen and (max-width:320px) {
+        #grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+        }
+    }
+</style>
+<!-- 도시락 -->
+
+<!-- video -->
+<div class="blank" style="height: 150px;"></div>
+<div class="video_part">
+<div class="video_part2">
+        <div>
+            <h1>[오늘도시락]</h1>
+            <br>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames <br>
+                ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, <br>
+                tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean <br>
+                ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est <br>
+                et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo <br>
+                vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, <br>
+                eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in <br>
+                turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, <br>
+                tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. <br>
+                Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus
+            </p>
+        </div>
+        <div class="blank" style="width: 7%;"></div>
+    <video src="./114594-701775953_small.mp4" style="width: 45%;" autoplay muted loop></video>
+</div>
+</div>
+<style>
+    .video_part{
+        display: flex;justify-content: center;padding: 40px 0;background-color: #ddd;
+    }
+    .video_part2{
+        display: flex;align-items: center;
+    }
+    @media screen and (max-width:768px) {
+        .video_part{
+            text-align: center;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .video_part2{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        video{
+            margin-top: 30px;
+        }
+    }
+</style>
+
+<!-- video -->
+
+<!-- footer -->
+
+<style>
+    .footer_part{
+        display: flex;justify-content: center; background-color: rgb(82, 82, 82);padding: 60px 0;color: white;
+    }
+    .footer_part2{
+        display: flex;justify-content: space-between;width: 70%;font-size: 16px;
+    }
+        @media screen and (max-width:768px) {
+        .footer_part{
+            text-align: center;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .footer_part2{
+            display: block;
+        }
+    }
+</style>
+
+<div class="footer_part">
+    <div class="footer_part2">
+        <div>
+            <img src="./mimilunchbox.jpg" style="width: 200px;">
+        </div>
+        <div>
+            <div style="font-size: 26px;font-weight: bold;">
+                [고객센터] <br>
+                1000-1222 <br><br>
+            </div>
+            문의시간 : 08:00~17:00 <br>
+
+            점심시간 : 12:30~ 13:30 <br>
+
+            고객센터 휴무: 주말 및 공휴일 <br>
+
+            계좌번호 : 기업은행 101-117393-04-010 <br>
+            (예금주: 주식회사 해림푸드시스템) <br><br>
+            <i class="fa-brands fa-square-instagram"></i>
+            <i class="fa-brands fa-square-facebook"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-square-twitter"></i>
+        </div>
+
+        <div>
+            이용약관 | 개인정보처리방침 <br>
+            (주)해림푸드시스템<br>
+
+            사업자 등록번호 : 742-87-01254<br>
+
+            Email : haerim@naver.com<br>
+
+            FAX : 051-731-1365<br>
+
+            부산광역시 금정구 반송로490번길 14, 1층(금사동)<br>
+
+
+
+            copyright @ honeytembox . All Right Reserved
+        </div>
+    </div>
+</div>
+<style>
+    .fa-brands {
+        font-size: 27px;
+    }
+</style>
+<!-- footer -->

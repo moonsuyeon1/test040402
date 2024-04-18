@@ -1,0 +1,59 @@
+/* 중복제거 */
+/* h1 {
+    border-width: 5px;
+    border-color: red;
+    border-style: solid;
+    display: inline;
+  }
+  a {
+    border-width: 5px;
+    border-color: red;
+    border-style: solid;
+  } */
+  h1, a{
+    /* 한줄 표기 */
+    border: red 5px solid;
+    /* padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px; */
+    /* padding: 30px 20px; */
+    /* 시간방향 */
+    padding: 10px 20px 30px 40px; 
+    margin: 40px;
+  }
+  #grid {
+    border: 5px solid pink;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  #flex {
+    border: 5px solid pink;
+    display: grid;
+    flex-direction: column;
+  }
+  /* div {
+    border: 5px solid gray;
+  } */
+  img{
+    object-fit: cover;
+    width: 100%;
+    height: 100px;
+  }
+  /* 미디어쿼리 테스트 중 */
+  div {
+    border: 10px solid green;
+    font-size: 60px;
+  }
+  @media(min-width: 800px){
+    div {
+      display: none;
+    }
+  }
+  @media screen and (min-width: 900px){
+    body{
+      /* 이미지 추가 */
+      background: url(../images/laba.jpg) no-repeat fixed;
+      background-size: cover;
+    }
+  }

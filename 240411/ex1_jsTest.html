@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write("<h1>오늘 점심은 뭐 먹지?</h1>");
+        document.write("<h2>오늘 메뉴는 수제버거</h2>");
+        document.write(1+1);
+        document.write("<br>")
+        document.write("1+1");
+    </script>
+    <script>
+
+    </script>
+    <br>
+    <input type="button" value="confirmTest" onclick="
+    if (window.confirm('Do you really want to leave?')) {
+
+alert('오늘 국밥 먹음')
+}
+    ">
+<br>
+<script>
+    document.write("방법1")
+</script>
+<input type="text" value="onchage테스트" onchange="alert('changed')">
+<br>
+<script>
+    document.write("방법2")
+</script>
+<input type="text" onkeydown="alert('key down')" class="keydown">
+<input type="button" value="clear" class="button">
+<script>
+    var button = document.querySelector(".button");
+    var keydowns = document.querySelectorAll(".keydown");
+
+    button.addEventListener("click", function() {
+        keydowns.forEach(function(input) {
+            input.value = "";
+        });
+    });
+</script>
+<br>
+<script>
+    document.write("방법3")
+</script>
+<input type="text" onkeydown="alert('key down')" id="keydown1">
+<button onclick="textdelete()">clear</button>
+
+<script>
+    function textdelete(){
+        document.getElementById("keydown1").value = '';
+    }
+</script>
+
+
+
+
+</body>
+</html>

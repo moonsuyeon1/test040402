@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // key : value 
+        // 객처선언
+        var starcraft = {
+            "zerg" : "히드라",
+            "teran" : "마린",
+            "protoss" : "질럿"
+        }
+
+        document.write("스타에서 좋아하는 유닛 : " + starcraft.zerg + "<br>");
+
+        starcraft["zerg_unit2"] = "저글링";
+
+        document.write("스타에서 좋아하는 유닛 : " + starcraft["zerg_unit2"] + "<br>");
+
+        starcraft.zerg3 = "저글링";
+
+        document.write("스타에서 좋아하는 유닛 : " + starcraft.zerg3 + "<br>");
+    </script>
+</body>
+</html>
+
+
+
+<script>
+    for(var key in starcraft) {
+	document.write('<h2>'+ key + '</h2>'+'<br>');
+}
+
+for(var key in starcraft) {
+	document.write('<h2>'+ starcraft[key] + '</h2>'+'<br>');
+}
+</script>
